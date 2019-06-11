@@ -11,13 +11,14 @@ update_id = None
 
 # Definitions
 TELEGRAM_USERNAME = [YOUR_TELEGRAM_USERNAME_HERE]
+BOT_TOKEN = [YOUR_TELEGRAM_BOT_TOKEN_HERE]
 PC_USERNAME = [YOUR_PC_USERNAME_HERE]
 
 def main():
     """Run the bot."""
     global update_id
 
-    bot = telegram.Bot('YOUR_TOKEN_HERE')
+    bot = telegram.Bot(BOT_TOKEN)
 
     try:
         update_id = bot.get_updates()[0].update_id
